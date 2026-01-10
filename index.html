@@ -335,6 +335,136 @@
             padding: 2rem;
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-container {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .testimonials-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .testimonial-info h4 {
+            color: #1e3c72;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-date {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        .star.empty {
+            color: #ddd;
+        }
+
+        .testimonial-text {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .review-form-section {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        .review-form-section h3 {
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .rating-input {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .rating-input label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: #1e3c72;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .star-rating-input {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .star-rating-input span {
+            cursor: pointer;
+            color: #ddd;
+            transition: color 0.2s;
+        }
+
+        .star-rating-input span:hover,
+        .star-rating-input span.active {
+            color: #ffd700;
+        }
+
+        .review-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
@@ -436,6 +566,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -521,6 +652,105 @@
                     <h3>Residential Development</h3>
                     <p>Electrical and construction material supply for a 20-unit housing development project.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        
+        <div class="testimonials-container">
+            <!-- Existing Testimonials Display -->
+            <div class="testimonials-display">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JM</div>
+                        <div class="testimonial-info">
+                            <h4>John Mwangi</h4>
+                            <p class="testimonial-date">December 2025</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Excellent service! They installed solar panels at my home and the results have been amazing. My electricity bills have dropped by 70%. Highly professional team!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SK</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Kamau</h4>
+                            <p class="testimonial-date">November 2025</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Home Works Venture did a complete electrical installation for our new office building. On time, within budget, and exceptional quality. Thank you Simon and team!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">PM</div>
+                        <div class="testimonial-info">
+                            <h4>Peter Mutua</h4>
+                            <p class="testimonial-date">October 2025</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <p class="testimonial-text">"Great experience working with them. They supplied all construction materials for my project at very competitive prices. Reliable and trustworthy company."</p>
+                </div>
+            </div>
+
+            <!-- Review Submission Form -->
+            <div class="review-form-section">
+                <h3>Share Your Experience</h3>
+                <form id="reviewForm" class="review-form">
+                    <div class="rating-input">
+                        <label>Rate Our Service</label>
+                        <div class="star-rating-input" id="starRating">
+                            <span data-rating="1">★</span>
+                            <span data-rating="2">★</span>
+                            <span data-rating="3">★</span>
+                            <span data-rating="4">★</span>
+                            <span data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="ratingValue" name="rating" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewName">Your Name</label>
+                        <input type="text" id="reviewName" name="reviewName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewEmail">Email</label>
+                        <input type="email" id="reviewEmail" name="reviewEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewText">Your Review</label>
+                        <textarea id="reviewText" name="reviewText" placeholder="Tell us about your experience with our services..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button">Submit Review</button>
+                </form>
             </div>
         </div>
     </section>
@@ -627,6 +857,65 @@
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
             this.reset();
+        });
+
+        // Star Rating System
+        const starRating = document.getElementById('starRating');
+        const ratingValue = document.getElementById('ratingValue');
+        const stars = starRating.querySelectorAll('span');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingValue.value = rating;
+                
+                // Update star display
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseenter', function() {
+                const rating = this.getAttribute('data-rating');
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.style.color = '#ffd700';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            });
+        });
+
+        starRating.addEventListener('mouseleave', function() {
+            const currentRating = ratingValue.value;
+            stars.forEach((s, index) => {
+                if (index < currentRating) {
+                    s.style.color = '#ffd700';
+                } else {
+                    s.style.color = '#ddd';
+                }
+            });
+        });
+
+        // Review Form Submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const rating = ratingValue.value;
+            if (rating === '0') {
+                alert('Please select a star rating before submitting your review.');
+                return;
+            }
+
+            alert('Thank you for your review! Your feedback helps us serve you better.');
+            this.reset();
+            ratingValue.value = '0';
+            stars.forEach(s => s.classList.remove('active'));
         });
     </script>
 </body>
