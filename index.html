@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Works Venture Limited</title>
+    <title>Home Works Venture Limited - Light Up The World</title>
     <style>
         * {
             margin: 0;
@@ -54,13 +54,6 @@
             font-weight: bold;
             color: white;
             line-height: 1.2;
-        }
-
-        .logo-text span {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: normal;
-            opacity: 0.9;
         }
 
         .nav-links {
@@ -155,8 +148,23 @@
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .service-icon svg {
+            width: 45px;
+            height: 45px;
+            fill: white;
         }
 
         .service-card h3 {
@@ -351,12 +359,14 @@
         .info-item {
             margin-bottom: 1.5rem;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
         }
 
-        .info-icon {
-            font-size: 1.5rem;
+        .info-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
         }
 
         /* Footer */
@@ -364,7 +374,82 @@
             background: #1e3c72;
             color: white;
             text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 0;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 80px 2rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+
+        .why-choose-us .section-title {
+            color: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-item {
+            background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .why-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .why-item .check-icon {
+            color: #ffd700;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .why-item p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer .footer-links {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        footer .footer-links a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: opacity 0.3s;
+        }
+
+        footer .footer-links a:hover {
+            opacity: 0.8;
         }
 
         /* Testimonials Section */
@@ -617,8 +702,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <h1>Light Up The World</h1>
-        <p>Professional Electrical & Solar Solutions for a Brighter Tomorrow</p>
-        <a href="#contact" class="cta-button">Try Us Today</a>
+        <p>Trusted Electrical & Solar Solutions for Homes & Businesses</p>
+        <a href="#contact" class="cta-button">Request a Free Quote</a>
     </section>
 
     <!-- Services Section -->
@@ -626,22 +711,38 @@
         <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">⚡</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7,2V13H10V22L17,10H13L17,2H7Z"/>
+                    </svg>
+                </div>
                 <h3>Electrical Installation</h3>
                 <p>Complete electrical installation services for residential, commercial, and industrial projects. From wiring to panel upgrades, we handle it all with precision.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">☀️</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,2L14.39,5.42C13.65,5.15 12.84,5 12,5C11.16,5 10.35,5.15 9.61,5.42L12,2M3.34,7L7.5,6.65C6.9,7.16 6.36,7.78 5.94,8.5C5.5,9.24 5.25,10 5.11,10.79L3.34,7M3.36,17L5.12,13.23C5.26,14 5.53,14.78 5.95,15.5C6.37,16.24 6.91,16.86 7.5,17.37L3.36,17M20.65,7L18.88,10.79C18.74,10 18.47,9.23 18.05,8.5C17.63,7.78 17.1,7.15 16.5,6.64L20.65,7M20.64,17L16.5,17.36C17.09,16.85 17.62,16.22 18.04,15.5C18.46,14.77 18.73,14 18.87,13.21L20.64,17Z"/>
+                    </svg>
+                </div>
                 <h3>Solar Installation</h3>
                 <p>Harness the power of the sun with our expert solar panel installation services. Reduce your energy costs with sustainable solutions.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔌</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18,8H17V6A5,5 0 0,0 12,1A5,5 0 0,0 7,6V8H6A2,2 0 0,0 4,10V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V10A2,2 0 0,0 18,8M8.9,6C8.9,4.29 10.29,2.9 12,2.9C13.71,2.9 15.1,4.29 15.1,6V8H8.9V6M16,16H13V19H11V16H8V14H11V11H13V14H16V16Z"/>
+                    </svg>
+                </div>
                 <h3>Electrical Material Supply</h3>
                 <p>Quality electrical materials and equipment for all your project needs. We supply trusted brands at competitive prices.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏗️</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,3L2,12H5V20H19V12H22L12,3M11,8H13V11H16V13H13V16H11V13H8V11H11V8Z"/>
+                    </svg>
+                </div>
                 <h3>Construction Material Supply</h3>
                 <p>Comprehensive construction material supply services. From cement to finishing materials, we've got your project covered.</p>
             </div>
@@ -653,12 +754,36 @@
         <div class="about-content">
             <div class="about-text">
                 <h2>About Home Works Venture Limited</h2>
+                <p>Home Works Venture Limited specializes in electrical and solar installations, delivering reliable power solutions for homes, businesses, and industrial facilities, with construction material supply to support complete project execution.</p>
                 <p>With years of experience in the electrical and construction industry, Home Works Venture Limited has established itself as a trusted partner for businesses and homeowners across the region.</p>
                 <p>Our mission is simple yet powerful: Light Up The World. We're committed to bringing reliable electrical solutions, sustainable solar energy, and quality construction materials to every project we undertake.</p>
                 <p>We pride ourselves on our attention to detail, adherence to safety standards, and our ability to complete projects on time and within budget. From small residential repairs to large commercial installations, we approach every job with the same level of professionalism and dedication.</p>
             </div>
             <div class="about-image">
                 <img src="images/logo.png" alt="Home Works Venture Limited">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2 class="section-title">Why Choose Home Works Venture</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <h3><span class="check-icon">✔</span> Skilled & Reliable Technicians</h3>
+                <p>Our team of certified electricians and solar experts bring years of experience and professionalism to every project.</p>
+            </div>
+            <div class="why-item">
+                <h3><span class="check-icon">✔</span> Quality Materials & Safe Installations</h3>
+                <p>We use only trusted brands and follow strict safety standards to ensure long-lasting, secure installations.</p>
+            </div>
+            <div class="why-item">
+                <h3><span class="check-icon">✔</span> Timely Project Delivery</h3>
+                <p>We value your time and commit to completing every project on schedule without compromising quality.</p>
+            </div>
+            <div class="why-item">
+                <h3><span class="check-icon">✔</span> Customer-Focused Service</h3>
+                <p>Your satisfaction is our priority. We listen to your needs and deliver solutions tailored to your requirements.</p>
             </div>
         </div>
     </section>
@@ -808,6 +933,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2 class="section-title">Get In Touch</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem;">
+            Ready to light up your space? Contact us today for a free consultation and quote.
+        </p>
         <div class="contact-content">
             <div class="contact-form">
                 <form id="contactForm">
@@ -833,39 +961,34 @@
             <div class="contact-info">
                 <h3>Contact Information</h3>
                 <div class="info-item">
-                    <span class="info-icon">📍</span>
                     <div>
-                        <strong>Address</strong><br>
+                        <strong>Address</strong>
                         P.O. Box 12009-10100, Nyeri
                     </div>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">📞</span>
                     <div>
-                        <strong>Phone</strong><br>
+                        <strong>Phone</strong>
                         +254 768 879 539
                     </div>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">✉️</span>
                     <div>
-                        <strong>Email</strong><br>
+                        <strong>Email</strong>
                         homesimon254@gmail.com
                     </div>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">👤</span>
                     <div>
-                        <strong>Contact Person</strong><br>
+                        <strong>Contact Person</strong>
                         Simon Home
                     </div>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">⏰</span>
                     <div>
-                        <strong>Business Hours</strong><br>
+                        <strong>Business Hours</strong>
                         Mon - Fri: 8:00 AM - 6:00 PM<br>
-                        Sat: 9:00 AM - 4:00 PM
+                        Sat: 9:00 AM - 2:00 PM
                     </div>
                 </div>
             </div>
